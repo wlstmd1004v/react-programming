@@ -1,5 +1,5 @@
 /* eslint-disable no-inner-declarations */
-import Switcher from "@/components/Switcher/Switcher";
+import Switcher from '@/components/Switcher/Switcher';
 import { useState } from 'react';
 
 {
