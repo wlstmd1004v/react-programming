@@ -1,10 +1,13 @@
-function Logo() {
+import { number } from 'prop-types';
+
+function Logo({ size = 100, ...restProps }) {
   return (
     <svg
-      width="100%"
-      height="100%"
+      width={size}
+      height={size}
       viewBox="-10.5 -9.45 21 18.9"
       fill="none"
+      {...restProps}
     >
       <circle cx="0" cy="0" r="2" fill="currentColor"></circle>
       <g stroke="currentColor" strokeWidth="1" fill="none">
@@ -15,5 +18,9 @@ function Logo() {
     </svg>
   );
 }
+
+Logo.propTypes = {
+  size: number,
+};
 
 export default Logo;

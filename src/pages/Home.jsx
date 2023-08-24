@@ -1,17 +1,14 @@
-import Logo from '@/components/Logo';
+import useDocumentTitle from '@/hooks/useDocumentTitle';
 
 function Home() {
-  return (
-    <>
-      <h2>홈 페이지</h2>
+  useDocumentTitle('홈');
 
-      <div hidden className="demoLogos">
-        <Logo />
-        <Logo color="blue" size={12} />
-        <Logo color="sky" />
-        <Logo color="rose" size={108} />
-      </div>
-    </>
+  return (
+    <div className="grid place-content-center bg-hero bg-center bg-cover min-h-[calc(100vh_-_200px)]">
+      <h2 className="text-white tracking-widest font-extralight text-4xl uppercase">
+        Shop<span className="text-[60px] text-yellow-400">.</span>
+      </h2>
+    </div>
   );
 }
 

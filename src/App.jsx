@@ -1,13 +1,21 @@
-import RootLayout from './layout/RootLayout';
-import LearnStateAndEffects from './pages/LearnStateAndEffects';
+import AuthProvider from '@/contexts/Auth';
+import ThemeProvider from '@/contexts/Theme';
+import { Toaster } from 'react-hot-toast';
+import { RouterProvider } from 'react-router-dom';
+import router from './routes';
 
 function App() {
   return (
-    <div className="App">
-      <RootLayout>
-        <LearnStateAndEffects />
-      </RootLayout>
-    </div>
+    <>
+      <ThemeProvider>
+        <AuthProvider>
+          <div className="App">
+            <RouterProvider router={router} />
+          </div>
+        </AuthProvider>
+      </ThemeProvider>
+      <Toaster />
+    </>
   );
 }
 
